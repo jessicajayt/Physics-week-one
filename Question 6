@@ -1,0 +1,11 @@
+import numpy as np 
+import matplotlib.pyplot as plt 
+x = [1,2,3,4,5,6,7]
+y = [1,2,3,4,5,6,7]
+
+plt.scatter(x,y)
+plt.title('velocity(kmh) as a function of the radius#(kpc)')
+plt.xlabel('radius(kpc)')
+plt.ylabel('velocity(km/h)')
+plt.plot(np.unique(x), np.poly1d(np.polyfit(x, y, 1))(np.unique(x)))
+plt.show()
